@@ -1,0 +1,9 @@
+# Installation directories
+build/
+dist/
+myccl.egg-info/
+__pycache__/
+
+# Test files
+TEST*.py
+SAVE.py
