@@ -2,7 +2,6 @@
 from .pspec_base import PowerSpectrumNonLinear
 from ..pk2d import Pk2D
 
-import pyhmcode as hmcode
 import numpy as np
 
 
@@ -28,6 +27,8 @@ class PowerSpectrumHMCode(PowerSpectrumNonLinear):
     @staticmethod
     def get_pyhmcode_cosmology(cosmo):
         """Get a pyhmcode-compatible cosmology."""
+        import pyhmcode as hmcode
+
         out = hmcode.Cosmology()
         out.om_m = cosmo["Omega_m"]
         out.om_b = cosmo["Omega_b"]
@@ -39,6 +40,8 @@ class PowerSpectrumHMCode(PowerSpectrumNonLinear):
         return out
 
     def get_power_spectrum(self, logT_AGN=7.8):
+        import pyhmcode as hmcode
+
         c = self.hmcode_cosmo
         c.theat = 10**logT_AGN
 

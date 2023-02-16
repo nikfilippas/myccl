@@ -118,7 +118,7 @@ def _methods_of_cosmology(cls=None, *, modules=[]):
     return cls
 
 
-_modules = ["background", "boltzmann", "cells", "musigma", "power", "pspec"]
+_modules = ["background", "cells", "musigma", "power", "pspec"]
 
 
 @_methods_of_cosmology(modules=_modules)
