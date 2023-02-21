@@ -4,7 +4,7 @@
 # Deprecation cycle starts in Numpy 1.20 and ends in Numpy 1.24.
 from packaging.version import parse
 import numpy
-numpy.int = int if parse(numpy.__version__) >= parse("1.20.0") else np.int
+numpy.int = int if parse(numpy.__version__) >= parse("1.20.0") else numpy.int
 del parse, numpy
 
 from .core import *
